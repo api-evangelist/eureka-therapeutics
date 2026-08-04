@@ -1,7 +1,18 @@
 aid: eureka-therapeutics
 name: Eureka Therapeutics
-description: 'Eureka Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Eureka Therapeutics, Inc. is a privately held, clinical-stage biopharmaceutical
+  company headquartered in Emeryville, California, developing T-cell therapies for solid
+  tumors and hematologic malignancies. The company was founded by Dr. Cheng Liu and is
+  built on two proprietary platforms: E-ALPHA, a high-throughput human antibody discovery
+  engine used to find binders against cancer-specific targets, and ARTEMIS, an engineered
+  T-cell receptor platform (AbTCR) designed to deliver CAR-T-level potency with a reduced
+  cytokine-release profile. Its clinical programs include ET140203 (ARYA-1 in adults,
+  ARYA-2 in pediatrics) and ECT204 (ARYA-3) in advanced liver cancer, alongside a GPC2
+  ARTEMIS T-cell program for neuroblastoma licensed from the National Cancer Institute.
+  Eureka publishes a corporate website, pipeline and technology overviews, a press-release
+  archive with an RSS feed, and patient-facing trial information; as of this profile it
+  publishes no public developer portal, API documentation, or machine-readable API contract.'
+image: https://www.eurekatherapeutics.com/wp-content/uploads/2022/05/logo-1.png
 url: https://raw.githubusercontent.com/api-evangelist/eureka-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +23,14 @@ created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Life Sciences
+- Cell Therapy
+- Immuno-Oncology
+- Oncology
+- Clinical Trials
+- Healthcare
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,69 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/eureka-therapeutics-domain-security.yml
+- type: LLMsTxt
+  url: llms/eureka-therapeutics-llms.txt
 - type: Website
+  url: https://www.eurekatherapeutics.com/
+- type: About
+  url: https://www.eurekatherapeutics.com/about/
+- type: Technology
+  url: https://www.eurekatherapeutics.com/technology/
+- type: Pipeline
+  url: https://www.eurekatherapeutics.com/pipeline/
+- type: Blog
+  url: https://www.eurekatherapeutics.com/press/
+- type: BlogRSS
+  url: https://www.eurekatherapeutics.com/category/press-releases/feed/
+- type: Support
+  url: https://www.eurekatherapeutics.com/contact_us/
+- type: Careers
+  url: https://www.eurekatherapeutics.com/careers/
+- type: TermsOfService
+  url: https://www.eurekatherapeutics.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.eurekatherapeutics.com/terms-conditions-privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/eureka-therapeutics-inc
+- type: SecondaryMarket
   url: https://forgeglobal.com/eureka-therapeutics_stock/
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-contract-discovery:
+  probed: '2026-08-04'
+  result: no-machine-readable-contract
+  note: 'Corporate WordPress site only. Unknown paths soft-404 with HTTP 200 and the
+    homepage body, so 200s on /openapi.json, /swagger.json, /api-docs, /api and /graphql
+    are catch-all HTML, not specs. /.well-known/* returns a genuine 404. api., developer.,
+    docs., status., trust. and mcp. subdomains resolve to the shared host but serve
+    nothing on 443. No GitHub organization, no first-party packages on npm/PyPI/RubyGems/crates.io,
+    no llms.txt, no MCP endpoint, no A2A agent card, no AsyncAPI, no webhooks.'
+  surfaces_checked:
+  - {url: 'https://www.eurekatherapeutics.com/openapi.json', status: 200, result: html-soft-404}
+  - {url: 'https://www.eurekatherapeutics.com/swagger.json', status: 200, result: html-soft-404}
+  - {url: 'https://www.eurekatherapeutics.com/api-docs', status: 200, result: html-soft-404}
+  - {url: 'https://www.eurekatherapeutics.com/graphql', status: 200, result: html-soft-404}
+  - {url: 'https://www.eurekatherapeutics.com/llms.txt', status: 200, result: html-soft-404}
+  - {url: 'https://www.eurekatherapeutics.com/.well-known/agent-card.json', status: 404}
+  - {url: 'https://www.eurekatherapeutics.com/.well-known/agent.json', status: 404}
+  - {url: 'https://www.eurekatherapeutics.com/.well-known/security.txt', status: 404}
+  - {url: 'https://www.eurekatherapeutics.com/.well-known/openid-configuration', status: 404}
+  - {url: 'https://www.eurekatherapeutics.com/.well-known/oauth-authorization-server', status: 404}
+  - {url: 'https://www.eurekatherapeutics.com/.well-known/api-catalog', status: 404}
+  - {url: 'https://www.eurekatherapeutics.com/.well-known/ai-plugin.json', status: 404}
+  - {url: 'https://api.eurekatherapeutics.com/', status: 0, result: no-listener}
+  - {url: 'https://developer.eurekatherapeutics.com/', status: 0, result: no-listener}
+  - {url: 'https://docs.eurekatherapeutics.com/', status: 0, result: no-listener}
+  cms_rest_api:
+    url: https://www.eurekatherapeutics.com/wp-json/
+    status: 200
+    namespaces: 35
+    routes: 415
+    recorded_as_api: false
+    reason: WordPress core/plugin REST surface exposed by the CMS, not an API the company
+      publishes or documents for consumers; not listed in apis[].

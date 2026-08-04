@@ -42,5 +42,7 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Eureka Therapeutics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
+Eureka Therapeutics, Inc. is a privately held, clinical-stage biopharmaceutical company in Emeryville, California, developing T-cell therapies for solid tumors and hematologic malignancies on its E-ALPHA antibody-discovery and ARTEMIS (AbTCR) T-cell receptor platforms. As of 2026-08-04 the company publishes no public developer portal, API documentation, or machine-readable API contract; this profile records its public company surface and a probed domain-security posture only.
+
+- https://www.eurekatherapeutics.com/
 - https://forgeglobal.com/eureka-therapeutics_stock/
